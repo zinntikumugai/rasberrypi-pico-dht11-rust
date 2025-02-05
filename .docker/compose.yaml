@@ -1,0 +1,12 @@
+services:
+  myproject:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "baker-link-env"
+    container_name: "myproject-container"
+    volumes:
+      - "../:/myproject"
+    working_dir: /myproject
+    command: /bin/sh
+    tty: true
